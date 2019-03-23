@@ -1,0 +1,5 @@
+DELETE FROM USR;
+
+INSERT INTO USR VALUES(1, 'Kohei', 'Kawabata', 0, '2019-01-01 00:00:00.0');
+INSERT INTO USR VALUES(2, '(・∀・)', 'ふぉふぉふぉ', 0, '2019-01-01 00:00:00.0');
+INSERT INTO USR VALUES(3, '(・ω・`)', 'しょぼーん', 0, '2019-01-01 00:00:00.0');
