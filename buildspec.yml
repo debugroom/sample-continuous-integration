@@ -1,0 +1,22 @@
+version: 0.2
+env:
+  parameter-store:
+    SONARQUBE_TOKEN: "SONARQUBE_TOKEN"
+    SONARQUBE_ENDPOINT: "SONARQUBE_ENDPOINT"
+phases:
+  install:
+    commands:
+      - wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.3.0.1492-linux.zip
+      - unzip sonar-scanner-cli-3.3.0.1492-linux.zip -d .build
+      - export PATH=$PATH:./.build/sonar-scanner-3.3.0.1492-linux/bin
+  build:
+    commands:
+      - sonar-scanner
+      - mvn test
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - mvn package
+artifacts:
+  files:
+    - target/sample-aws-codebuild-0.0.1-SNAPSHOT.jar
