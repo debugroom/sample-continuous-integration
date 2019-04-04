@@ -11,12 +11,12 @@ phases:
       - export PATH=$PATH:./.build/sonar-scanner-3.3.0.1492-linux/bin
   build:
     commands:
-      - sonar-scanner
       - mvn test
+      - sonar-scanner
   post_build:
     commands:
       - echo Build completed on `date`
       - mvn package
 artifacts:
   files:
-    - target/sample-aws-codebuild-0.0.1-SNAPSHOT.jar
+    - target/sample-continuous-integration-0.0.1-SNAPSHOT.jar
