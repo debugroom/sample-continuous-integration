@@ -48,7 +48,7 @@ public class SampleServiceImpl implements SampleService{
 
             updateTargetUser.setLastUpdateAt(LocalDateTime.now());
 
-        }catch (EntityNotFoundException e){
+        }catch (NullPointerException | EntityNotFoundException e){
             throw new BusinessException("0001", "User does not exist or invalid credential.");
         }
 
