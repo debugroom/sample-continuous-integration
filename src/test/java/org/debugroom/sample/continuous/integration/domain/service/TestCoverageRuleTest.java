@@ -27,6 +27,7 @@ public class TestCoverageRuleTest {
                 IntegerFixture.builder().integerArray(new Integer[]{0,1,2}).build(),
                 IntegerFixture.builder().integerArray(new Integer[]{1,3,4}).build(),
                 IntegerFixture.builder().integerArray(new Integer[]{5,2,3}).build(),
+                IntegerFixture.builder().integerArray(new Integer[]{6,6,6}).build(),
         };
 
         @Theory
